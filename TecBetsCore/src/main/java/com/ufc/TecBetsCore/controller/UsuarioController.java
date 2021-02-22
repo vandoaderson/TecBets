@@ -26,4 +26,6 @@ public class UsuarioController {
     public Usuario criar(@RequestBody Usuario usuario){
         return this.usuarioService.criar(usuario);
     }
+    @DeleteMapping("/removeUsuario/{id}")
+    public Usuario removerPeloId(@PathVariable String id) { return this.usuarioService.removerPeloId(id);}
 }
