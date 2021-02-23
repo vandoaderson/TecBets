@@ -27,7 +27,7 @@ public class ClubeServiceBusiness implements ClubeService {
     }
 
     @Override
-    public Clube criar(Clube clube) {
+    public Clube criarClube(Clube clube) {
         return this.clubeRepository.save(clube);
     }
 

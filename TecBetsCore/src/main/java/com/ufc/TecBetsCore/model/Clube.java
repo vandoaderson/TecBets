@@ -12,6 +12,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @Document
 public class Clube {
+
+    public Clube(String id,String nome, int rank){
+        this.id = id;
+        this.nome = nome;
+        this.rank = rank;
+    }
     @Id
     private String id;
 

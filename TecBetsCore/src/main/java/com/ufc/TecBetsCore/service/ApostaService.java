@@ -9,7 +9,7 @@ public interface ApostaService {
 
     Aposta obterPorId(String id);
 
-    Aposta criar(Aposta aposta);
+    Aposta criarAposta(Aposta aposta);
 
     Aposta removerPeloId(String id);
 }

@@ -23,8 +23,8 @@ public class PartidaController {
         return this.partidaService.obterPorId(id);
     }
     @PostMapping("/adicionaPartida")
-    public Partida criar(@RequestBody Partida partida){
-        return this.partidaService.criar(partida);
+    public Partida criarPartida(@RequestBody Partida partida){
+        return this.partidaService.criarPartida(partida);
     }
     @DeleteMapping("/removePartida/{id}")
     public Partida removerPeloId(@PathVariable String id) { return this.partidaService.removerPeloId(id);}

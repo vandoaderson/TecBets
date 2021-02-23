@@ -23,8 +23,8 @@ public class ApostaController {
         return this.apostaService.obterPorId(id);
     }
     @PostMapping("/adicionaAposta")
-    public Aposta criar(@RequestBody Aposta aposta){
-        return this.apostaService.criar(aposta);
+    public Aposta criarAposta(@RequestBody Aposta aposta){
+        return this.apostaService.criarAposta(aposta);
     }
     @DeleteMapping("/removeAposta/{id}")
     public Aposta removerPeloId(@PathVariable String id) { return this.apostaService.removerPeloId(id);}

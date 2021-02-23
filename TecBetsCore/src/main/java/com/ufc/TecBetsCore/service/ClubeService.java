@@ -9,7 +9,7 @@ public interface ClubeService {
 
     Clube obterPorId(String id);
 
-    Clube criar(Clube clube);
+    Clube criarClube(Clube clube);
 
     Clube removerPeloId(String id);
 }

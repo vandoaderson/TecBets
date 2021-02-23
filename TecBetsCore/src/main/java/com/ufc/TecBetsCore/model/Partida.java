@@ -6,8 +6,6 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.math.BigDecimal;
-
 @Getter
 @Setter
 @Data
@@ -24,6 +22,6 @@ public class Partida {
     private int quantidadeApostasMandante;
     private int quantidadeApostasVisitante;
 
-    private BigDecimal saldoMandante;
-    private BigDecimal saldoVisitante;
+    private double saldoMandante;
+    private double saldoVisitante;
 }

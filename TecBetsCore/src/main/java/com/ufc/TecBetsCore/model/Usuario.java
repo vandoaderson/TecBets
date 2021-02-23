@@ -14,11 +14,17 @@ import java.math.BigDecimal;
 @Document
 public class Usuario {
 
+    public Usuario(String id, String nome, Integer idade, double saldo){
+        this.id = id;
+        this.nome = nome;
+        this.idade = idade;
+        this.saldo = saldo;
+    }
     @Id
     private String id;
 
     private String nome;
     private Integer idade;
-    private BigDecimal saldo;
+    private double saldo;
 
 }

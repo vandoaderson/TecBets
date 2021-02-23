@@ -27,7 +27,7 @@ public class PartidaServiceBusiness implements PartidaService {
     }
 
     @Override
-    public Partida criar(Partida partida) {
+    public Partida criarPartida(Partida partida) {
         return this.partidaRepository.save(partida);
     }
 

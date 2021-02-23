@@ -26,7 +26,7 @@ public class UsuarioServiceBusiness implements UsuarioService {
     }
 
     @Override
-    public Usuario criar(Usuario usuario) {
+    public Usuario criarUsuario(Usuario usuario) {
         return this.usuarioRepository.save(usuario);
     }
 

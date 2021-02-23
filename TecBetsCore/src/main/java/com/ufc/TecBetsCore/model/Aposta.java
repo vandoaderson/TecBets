@@ -13,11 +13,20 @@ import java.math.BigDecimal;
 @Data
 @Document
 public class Aposta {
+
+    public Aposta(String id, String idUsuario, String idPartida, String idClube, double valorAposta) {
+        this.id = id;
+        this.idUsuario = idUsuario;
+        this.idPartida = idPartida;
+        this.idClube = idClube;
+        this.valorAposta = valorAposta;
+    }
+
     @Id
     private String id;
 
     private String idUsuario;
     private String idPartida;
     private String idClube;
-    private BigDecimal valorAposta;
+    private double valorAposta;
 }

@@ -10,7 +10,7 @@ public interface PartidaService {
 
     Partida obterPorId(String id);
 
-    Partida criar(Partida partida);
+    Partida criarPartida(Partida partida);
 
     Partida removerPeloId(String id);
 }

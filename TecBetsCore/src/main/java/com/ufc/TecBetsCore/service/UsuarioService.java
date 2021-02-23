@@ -9,7 +9,7 @@ public interface UsuarioService {
 
     Usuario obterPorId(String id);
 
-    Usuario criar(Usuario usuario);
+    Usuario criarUsuario(Usuario usuario);
 
     Usuario removerPeloId(String id);
 

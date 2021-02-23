@@ -20,15 +20,15 @@ public class ApostaServiceBusiness implements ApostaService {
     }
 
     @Override
+    public Aposta criarAposta(Aposta aposta) {
+        return this.apostaRepository.save(aposta);
+    }
+
+    @Override
     public Aposta obterPorId(String id) {
         return this.apostaRepository
                 .findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Aposta não existe."));
-    }
-
-    @Override
-    public Aposta criar(Aposta aposta) {
-        return this.apostaRepository.save(aposta);
     }
 
     @Override
