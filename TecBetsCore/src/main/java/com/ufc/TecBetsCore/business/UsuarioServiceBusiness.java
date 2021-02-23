@@ -1,4 +1,4 @@
-package com.ufc.TecBetsCore.impl;
+package com.ufc.TecBetsCore.business;
 
 import com.ufc.TecBetsCore.model.Usuario;
 import com.ufc.TecBetsCore.repository.UsuarioRepository;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UsuarioServiceImpl implements UsuarioService {
+public class UsuarioServiceBusiness implements UsuarioService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
@@ -28,5 +28,13 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     public Usuario criar(Usuario usuario) {
         return this.usuarioRepository.save(usuario);
+    }
+
+    @Override
+    public Usuario removerPeloId(String id){
+        Usuario usuarioDeletado = this.usuarioRepository.findById(id)
+                                    .orElseThrow(() -> new IllegalArgumentException("Usuario não existe."));
+        this.usuarioRepository.deleteById(id);
+        return usuarioDeletado;
     }
 }
